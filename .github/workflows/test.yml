@@ -1,0 +1,8 @@
+on:
+  push:
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@09d2acae674a48949e3602304ab46fd20ae0c42f
+      - run: zip package.zip README.md && npm cit && rm package.zip
